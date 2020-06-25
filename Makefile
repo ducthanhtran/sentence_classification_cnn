@@ -1,4 +1,4 @@
-SHELL := /bin/bash
+HELL := /bin/bash
 PERC := 10 # percentage of development and test data
 .PHONY: data, data_movie_review
 
@@ -6,7 +6,7 @@ data: data_movie_review
 
 data_movie_review:
 	{ \
-    mkdir -p ./data/movie_review/raw/extracted; \
+	mkdir -p ./data/movie_review/raw/extracted; \
 	wget -N http://www.cs.cornell.edu/people/pabo/movie-review-data/rt-polaritydata.tar.gz -P ./data/movie_review/raw; \
 	tar -xvzf./data/movie_review/raw/rt-polaritydata.tar.gz -C ./data/movie_review/raw/extracted; \
 	mkdir -p ./data/movie_review/interim; \
