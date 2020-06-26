@@ -24,6 +24,10 @@ data_movie_review:
 	mv ./data/movie_review/interim/split-00.gz ./data/movie_review/interim/test.gz; \
 	mv ./data/movie_review/interim/split-01.gz ./data/movie_review/interim/dev.gz; \
 	zcat ./data/movie_review/interim/all_data.utf8.shuffled.gz | tail -n +$$(($$doubled+1)) | gzip > ./data/movie_review/interim/train.gz; \
+	mkdir -p ./data/movie_review/final; \
+	ln -sf ../interim/train.gz ./data/movie_review/final/train.gz; \
+	ln -sf ../interim/test.gz ./data/movie_review/final/test.gz; \
+	ln -sf ../interim/dev.gz ./data/movie_review/final/dev.gz; \
 	}
 
 clean:
