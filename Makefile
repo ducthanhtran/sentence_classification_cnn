@@ -28,6 +28,7 @@ data_movie_review:
 	ln -sf ../interim/train.gz ./data/movie_review/final/train.gz; \
 	ln -sf ../interim/test.gz ./data/movie_review/final/test.gz; \
 	ln -sf ../interim/dev.gz ./data/movie_review/final/dev.gz; \
+	./data_preprocessing_movie_review.sh; \
 	}
 
 clean:
