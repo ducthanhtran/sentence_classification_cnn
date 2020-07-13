@@ -7,6 +7,9 @@ DEV = "./data/movie_review/final/dev.gz"
 TEST = "./data/movie_review/final/test.gz"
 
 
-if __name__ == "__main__":
+def main():
     dataset = DataSet(TRAIN, DEV, [TEST])
-    
+
+
+if __name__ == "__main__":
+    main()
